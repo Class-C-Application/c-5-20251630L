@@ -1,4 +1,5 @@
-#define _CRT_SECURE_NO_WARNINGS
+
+/*#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main(void)
@@ -13,6 +14,45 @@ int main(void)
 
 	// i를 0으로 초기화하세요
 	// input[i]가 0이 아닌 동안 printf("%d ", input[i++]); 형식으로 출력하는 while문을 작성하세요
+	puts("");
+
+	return 0;
+}*/
+
+/*
+#include <stdio.h>
+
+int main(void) {
+	int aaa[] = {0};
+	do {
+		printf("숫자 입력. 0을 눌러 입력 종료");
+			scanf("%d");
+	} while (aaa != 0);
+	
+	printf(aaa);
+	return 0;
+}
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	//초기화로 모든 원소에 0을 저장
+	int input[20] = { 0 };
+
+	printf("배열에 저장할 정수를 여러 개 입력하시오. ");
+	printf("0을 입력하면 입력을 종료합니다.\n");
+	int i = 0;
+	do {
+		scanf("%d", &input[i]);
+	} while (input[i++] != 0);
+
+	i = 0;
+	while (input[i] != 0) {
+		printf("%d ", input[i++]);
+	}
 	puts("");
 
 	return 0;
